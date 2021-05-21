@@ -7,6 +7,10 @@
 
 				<p style="font-size: 20px; color:red"><?php echo $this->session->flashdata('error'); ?></p>
 			<?php } ?>
+			<?php if ($this->session->flashdata('success')) { ?>
+
+				<p style="font-size: 20px; color:green"><?php echo $this->session->flashdata('success'); ?></p>
+			<?php } ?>
 			<a href="<?php echo site_url('insert'); ?>">
 			<button class="btn btn-primary"> Insert Record</button></a>
 			<div class="table-responsive">
