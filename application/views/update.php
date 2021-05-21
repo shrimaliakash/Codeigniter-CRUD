@@ -10,6 +10,10 @@
 
 		<p style="font-size: 18px; color:red"><?php	echo $this->session->flashdata('error'); ?></p>
 	<?php } ?>
+	<?php if ($this->session->flashdata('success')) { ?>
+
+		<p style="font-size: 20px; color:green"><?php echo $this->session->flashdata('success'); ?></p>
+	<?php } ?>
 	<?php echo form_open('Insert/updatedetails',['name'=>'insertdata','autocomplete'=>'off']);?>
 		<?php echo form_hidden('userid',$row->id);?>
 		<div class="row">
